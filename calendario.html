@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Médica - Clínica Santa Fe</title>
+    <link rel="stylesheet" href="css/calendario.css">
+
+    <link rel="stylesheet" href="css/menu.css">
+
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+	.footer {
+            background-color: #1f3b52; /* Color marino */
+            color: #ffffff; /* Letras blancas */
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .footer .column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+        .footer .links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer .links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer .links a:hover {
+            text-decoration: underline;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+</style>
+
+
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-1">
+        <div><img src="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe" alt=""></div>
+        <h1>Clínica Santa Fe</h1>
+        </a>
+
+<div class="enlaces">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Sedes.html">Sedes</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="fdecontactos.html">Contacto</a>
+        <a href="medicos.html">Staff Medico</a>
+    </nav>
+    <nav>
+        <a href="https://www.facebook.com/ClinicaSantaFeCostaRica/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/clinicasantafecr/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/51942890155"><i class="fa-brands fa-whatsapp"></i></a>
+    </nav>
+</div>
+</header>
+    <main>
+        <section class="appointment-form">
+            <h2>Agendar Cita</h2>
+            <form id="appointmentForm">
+                <label for="doctor">Doctor:</label>
+                <select id="doctor" name="doctor">
+                    <option value="Dr. Juan Pérez">Dr. Juan Pérez</option>
+                    <option value="Dra. María López">Dra. María López</option>
+                    <option value="Dr. Carlos Ramírez">Dr. Carlos Ramírez</option>
+                </select>
+
+                <label for="specialty">Especialidad:</label>
+                <select id="specialty" name="specialty">
+                    <option value="General">General</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Ginecología">Ginecología</option>
+                </select>
+
+                <label for="date">Día:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Agendar</button>
+            </form>
+        </section>
+        <section class="calendar">
+            <h2>Calendario</h2>
+            <div id="calendar"></div>
+        </section>
+    </main>
+    <script src="calendario.js"></script>
+</body>
+	<footer class="footer">
+        <div class="container">
+            <div class="column">
+                <ul class="links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Sedes.html">Sedes</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="medicos.html">Medicos</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Términos de uso</a></li>
+                    <li><a href="politica.html">Política de privacidad</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Jhon Quispe</a></li>
+                    <li><a href="#">Jhon Rosas</a></li>
+                    <li><a href="#">Christopher Vega</a></li>
+                    <li><a href="#">Jhonathan Portillo</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Clínica Santa Fé. Todos los derechos reservados.</p>
+    </footer>
+        
+</html>

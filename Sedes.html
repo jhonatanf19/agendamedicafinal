@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedes de la Clínica Médica</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #003366;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #002244;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+        header img {
+            height: 50px;
+        }
+        .header-1 {
+            display: flex;
+            align-items: center;
+        }
+        .header-1 h1 {
+            margin-left: 10px;
+        }
+        .enlaces nav {
+            display: flex;
+            gap: 15px;
+        }
+        .enlaces a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .enlaces a:hover {
+            color: #007BFF;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #fff;
+            margin: 20px 0;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .sedes-container {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .sede {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+        }
+        .sede:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .sede h2 {
+            margin-top: 0;
+            color: #003366;
+            font-size: 1.75em;
+        }
+        .sede p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .contenido-sede {
+            flex: 1;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .contenido-sede button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contenido-sede button:hover {
+            background-color: #0056b3;
+        }
+        .imagen {
+            flex: 150px;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .imagen img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .sede {
+                flex-direction: column;
+            }
+            .contenido-sede {
+                padding-right: 0;
+            }
+            .imagen {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+	.footer {
+            background-color: #1f3b52; /* Color marino */
+            color: #ffffff; /* Letras blancas */
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .footer .column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+        .footer .links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer .links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer .links a:hover {
+            text-decoration: underline;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-1">
+            <img src="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe" alt="Logotipo Clínica Santa Fe">
+            <h1>Clínica Santa Fe</h1>
+        </a>
+        <div class="enlaces">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="Sedes.html">Sedes</a>
+                <a href="especialidades.html">Especialidades</a>
+                <a href="fdecontactos.html">Contacto</a>
+                <a href="medicos.html">Staff Médico</a>
+            </nav>
+            <nav>
+                <a href="https://www.facebook.com/ClinicaSantaFeCostaRica/?locale=es_LA" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/clinicasantafecr/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/51942890155" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Sedes Santa Fe</h1>
+        <div class="sedes-container">
+            <div class="sede">
+                <div class="imagen">
+                    <img src="/img/sede 1.jpeg" alt="Imagen Sede Central">
+                </div>
+                <div class="contenido-sede">
+                    <h2>Sede Central</h2>
+                    <p>Dirección: Calle Principal 123, Ciudad Principal</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Horario: Lunes a Viernes de 8am a 6pm</p>
+                    <button onclick="openModal('mapModal1')">Ubicación</button>
+                </div>
+            </div>
+            <div class="sede">
+                <div class="contenido-sede">
+                    <h2>Sucursal Sur</h2>
+                    <p>Dirección: Calle Sur 789, Ciudad Principal</p>
+                    <p>Teléfono: (345) 678-9012</p>
+                    <p>Horario: Lunes a Viernes de 10am a 8pm</p>
+                    <button onclick="openModal('mapModal2')">Ubicación</button>
+                </div>
+                <div class="imagen">
+                    <img src="/img/sede 3.jpeg" alt="Imagen Sucursal Sur">
+                </div>
+            </div>
+            <div class="sede">
+                <div class="imagen">
+                    <img src="/img/sede 2.jpeg" alt="Imagen Sucursal Norte">
+                </div>
+                <div class="contenido-sede">
+                    <h2>Sucursal Norte</h2>
+                    <p>Dirección: Avenida Norte 456, Ciudad Principal</p>
+                    <p>Teléfono: (234) 567-8901</p>
+                    <p>Horario: Lunes a Viernes de 9am a 7pm</p>
+                    <button onclick="openModal('mapModal3')">Ubicación</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="mapModal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mapModal1')">&times;</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.1661485351024!2d-77.06891372402075!3d-12.032080141629374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ced06cefd7ef%3A0x94a428bcbea5729c!2sSta%20Fe%2C%20San%20Mart%C3%ADn%20de%20Porres%2015101!5e0!3m2!1ses-419!2spe!4v1721449159309!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <div id="mapModal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mapModal2')">&times;</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.1661485351024!2d-77.06891372402075!3d-12.032080141629374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ced06cefd7ef%3A0x94a428bcbea5729c!2sSta%20Fe%2C%20San%20Mart%C3%ADn%20de%20Porres%2015101!5e0!3m2!1ses-419!2spe!4v1721449159309!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <div id="mapModal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mapModal3')">&times;</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.1661485351024!2d-77.06891372402075!3d-12.032080141629374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ced06cefd7ef%3A0x94a428bcbea5729c!2sSta%20Fe%2C%20San%20Mart%C3%ADn%20de%20Porres%2015101!5e0!3m2!1ses-419!2spe!4v1721449159309!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+	<footer class="footer">
+        <div class="container">
+            <div class="column">
+                <ul class="links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Sedes.html">Sedes</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="medicos.html">Medicos</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Términos de uso</a></li>
+                    <li><a href="politica.html">Política de privacidad</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Jhon Quispe</a></li>
+                    <li><a href="#">Jhon Rosas</a></li>
+                    <li><a href="#">Christopher Vega</a></li>
+                    <li><a href="#">Jhonathan Portillo</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Clínica Santa Fé. Todos los derechos reservados.</p>
+    </footer>
+</html>
+

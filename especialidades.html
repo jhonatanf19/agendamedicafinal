@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Especialidades</title>
+    <link rel="stylesheet" href="css/especialidades.css">
+
+    <link rel="stylesheet" href="css/menu.css">
+
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #003366;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        section.especialidades {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .especialidad {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .especialidad:hover {
+            transform: scale(1.05);
+        }
+
+        .especialidad img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .info h2 {
+            margin-top: 0;
+        }
+
+        .info p {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .especialidad {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .especialidad {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-1">
+        <div><img src="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe" alt=""></div>
+        <h1>Clínica Santa Fe</h1>
+        </a>
+
+<div class="enlaces">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Sedes.html">Sedes</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="fdecontactos.html">Contacto</a>
+        <a href="medicos.html">Staff Medico</a>
+    </nav>
+    <nav>
+        <a href="https://www.facebook.com/ClinicaSantaFeCostaRica/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/clinicasantafecr/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/51942890155"><i class="fa-brands fa-whatsapp"></i></a>
+    </nav>
+</div>
+</header>
+    <section class="especialidades">
+        <div class="especialidad">
+            <img src="img/cardiologia.jpg" alt="Cardiología">
+            <div class="info">
+                <h2>Cardiología</h2>
+                <p>La cardiología es la especialidad médica que se ocupa de las afecciones del corazón y del sistema circulatorio.</p>
+            </div>
+        </div>
+        <div class="especialidad">
+            <img src="img/dermatodologia.jpg" alt="Dermatología">
+            <div class="info">
+                <h2>Dermatología</h2>
+                <p>La dermatología es la especialidad médica encargada del estudio de la piel y sus enfermedades.</p>
+            </div>
+        </div>
+        <div class="especialidad">
+            <img src="img/ginecologia.jpg" alt="Ginecología">
+            <div class="info">
+                <h2>Ginecología</h2>
+                <p>La ginecología es la especialidad médica que trata las enfermedades del sistema reproductor femenino.</p>
+            </div>
+        </div>
+        <div class="especialidad">
+            <img src="img/neurologia.jpg" alt="Neurología">
+            <div class="info">
+                <h2>Neurología</h2>
+                <p>La neurología es la especialidad médica que se encarga de diagnosticar y tratar enfermedades del sistema nervioso.</p>
+            </div>
+        </div>
+        <div class="especialidad">
+            <img src="img/pediatria.jpg" alt="Pediatría">
+            <div class="info">
+                <h2>Pediatría</h2>
+                <p>La pediatría es la especialidad médica que se ocupa del cuidado y tratamiento de los niños.</p>
+            </div>
+        </div>
+        <div class="especialidad">
+            <img src="img/oftalmologia.jpg" alt="Oftalmología">
+            <div class="info">
+                <h2>Oftalmología</h2>
+                <p>La oftalmología es la especialidad médica encargada del estudio y tratamiento de las enfermedades de los ojos.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

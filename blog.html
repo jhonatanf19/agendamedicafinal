@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Recursos de Salud</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="blog.js"></script>
+<style>
+	.footer {
+            background-color: #1f3b52; /* Color marino */
+            color: #ffffff; /* Letras blancas */
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .footer .column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+        .footer .links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer .links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer .links a:hover {
+            text-decoration: underline;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Blog de Recursos de Salud</h1>
+    </header>
+    <main>
+        <section class="add-post">
+            <h2>Agregar Nuevo Recurso</h2>
+            <form id="postForm">
+                <input type="text" id="title" placeholder="Título" required>
+                <textarea id="content" placeholder="Contenido" required></textarea>
+                <input type="url" id="image" placeholder="URL de la imagen (opcional)">
+                <button type="submit">Agregar Recurso</button>
+            </form>
+        </section>
+        <section class="posts" id="posts">
+            <h2>Recursos de Salud</h2>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog de Recursos de Salud</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+	<footer class="footer">
+        <div class="container">
+            <div class="column">
+                <ul class="links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Sedes.html">Sedes</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="medicos.html">Medicos</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Términos de uso</a></li>
+                    <li><a href="politica.html">Política de privacidad</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Jhon Quispe</a></li>
+                    <li><a href="#">Jhon Rosas</a></li>
+                    <li><a href="#">Christopher Vega</a></li>
+                    <li><a href="#">Jhonathan Portillo</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Clínica Santa Fé. Todos los derechos reservados.</p>
+    </footer>
+</html>

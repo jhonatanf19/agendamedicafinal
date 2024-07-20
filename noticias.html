@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Clínica Médica</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #005b96;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: hwb(204 47% 6%);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #f3eeee;
+            margin-bottom: 10px;
+        }
+        .noticia {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .noticia img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .noticia p {
+            color: rgb(243, 237, 237);
+            line-height: 1.5;
+        }
+        .footer {
+            background-color: #1f3b52; /* Color marino */
+            color: #ffffff; /* Letras blancas */
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .footer .column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+        .footer .links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer .links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer .links a:hover {
+            text-decoration: underline;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Noticias de la Clínica Médica</h1>
+
+        <div class="noticia">
+            <h2>Apertura de Nueva Sucursal</h2>
+            <img src="img/apertura.jpg" alt="Apertura de Nueva Sucursal">
+            <p>Estamos emocionados de anunciar la apertura de nuestra nueva sucursal en la ciudad. Ahora más cerca de ti para ofrecerte mejores servicios médicos.</p>
+        </div>
+
+        <div class="noticia">
+            <h2>Charla Sobre Salud Preventiva</h2>
+            <img src="img/charla.jpg" alt="Charla Sobre Salud Preventiva">
+            <p>Te invitamos a nuestra charla gratuita sobre salud preventiva el próximo sábado. Aprende cómo cuidar tu salud y la de tu familia.</p>
+        </div>
+
+        <div class="noticia">
+            <h2>Nuevos Servicios Disponibles</h2>
+            <img src="img/servicios.jpg" alt="Nuevos Servicios Disponibles">
+            <p>Ampliamos nuestra gama de servicios médicos para cubrir todas tus necesidades. Conoce más sobre lo que podemos ofrecerte.</p>
+        </div>
+    </div>
+</body>
+    <footer class="footer">
+        <div class="container">
+            <div class="column">
+                <ul class="links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Sedes.html">Sedes</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="medicos.html">Medicos</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Términos de uso</a></li>
+                    <li><a href="politica.html">Política de privacidad</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Jhon Quispe</a></li>
+                    <li><a href="#">Jhon Rosas</a></li>
+                    <li><a href="#">Christopher Vega</a></li>
+                    <li><a href="#">Jhonathan Portillo</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Clínica Santa Fé. Todos los derechos reservados.</p>
+    </footer>
+</html>

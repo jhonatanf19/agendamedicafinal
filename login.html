@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="login.js"></script>
+
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/ferreteria-bob-el-constructor.appspot.com/o/logosantasolo.png?alt=media&token=ccd7f8b2-e88d-4376-a09f-adf2aa61c5fe">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #1f3b52; /* Fondo principal color marino */
+            color: #ffffff; /* Texto principal blanco */
+            font-family: 'Montserrat', sans-serif; /* Fuente principal */
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer {
+            background-color: #0f273a; /* Color marino más oscuro */
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px; /* Ajuste el ancho máximo según sea necesario */
+            margin: 0 auto;
+        }
+
+        .footer .column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer .links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer .links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer .links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+
+    <title>Sistema de Inicio</title>
+</head>
+<body>
+    <h1>Sistema de Inicio</h1>
+    <form action="">
+        <table class="login-table">
+            <tr>
+                <td class="titulo"><br>ACCESO AL SISTEMA</td>
+            </tr>
+            <tr>
+                <td>
+                    <br><img src="img/inicio.png" alt="Imagen de acceso"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Usuario <br><br>
+                    <input id="txtUsu" type="text" placeholder="Ingrese su nombre">
+                </td>
+            </tr>
+            <tr>
+                <td><br>Contraseña <br><br>
+                    <input id="txtCon" type="password" placeholder="Ingrese su contraseña">
+                </td>
+            </tr>
+            <tr>
+                <td class="botoncito">
+                    <button type="button" onclick="ingresar();">Ingresar</button>
+                    <button type="button" onclick="salir();">Salir</button>
+                    <br><br><br>
+                </td>
+            </tr>
+        </table>
+    </form>
+<br>
+<br>
+</body>
+    <footer class="footer">
+        <div class="container">
+            <div class="column">
+                <ul class="links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Sedes.html">Sedes</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="medicos.html">Médicos</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Términos de uso</a></li>
+                    <li><a href="politica.html">Política de privacidad</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="links">
+                    <li><a href="#">Jhon Quispe</a></li>
+                    <li><a href="#">Jhon Rosas</a></li>
+                    <li><a href="#">Christopher Vega</a></li>
+                    <li><a href="#">Jhonathan Portillo</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Clínica Santa Fé. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
